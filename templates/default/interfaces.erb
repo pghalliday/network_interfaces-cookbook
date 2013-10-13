@@ -23,6 +23,12 @@ iface <%= @device %> inet <%= @type %>
 <% unless @bridge_stp.nil? -%>
 	bridge_stp <%= @bridge_stp ? "on" : "off" %>
 <% end %>
+<% if @bridge_fd -%>
+  bridge_fd <%= @bridge_fd %>
+<% end %>
+<% if @bridge_maxwait -%>
+  bridge_maxwait <%= @bridge_maxwait %>
+<% end %>
 <% if @bond_slaves -%>
 	bond-slaves<% @bond_slaves.each do |iface| %> <%= iface %><% end %>
 <% end %>

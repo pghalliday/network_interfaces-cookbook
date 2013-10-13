@@ -61,6 +61,8 @@ action :save do
       :broadcast => Chef::Recipe::Network_interfaces.value(:broadcast,new_resource.device, resource=new_resource, node),
       :bridge_ports => Chef::Recipe::Network_interfaces.value(:bridge,new_resource.device, resource=new_resource, node),
       :bridge_stp => Chef::Recipe::Network_interfaces.value(:bridge_stp,new_resource.device, resource=new_resource, node),
+      :bridge_fd => Chef::Recipe::Network_interfaces.value(:bridge_fd,new_resource.device, resource=new_resource, node),
+      :bridge_maxwait => Chef::Recipe::Network_interfaces.value(:bridge_maxwait,new_resource.device, resource=new_resource, node),
       :vlan_dev => Chef::Recipe::Network_interfaces.value(:vlan_dev,new_resource.device, resource=new_resource, node),
       :bond_slaves => Chef::Recipe::Network_interfaces.value(:bond,new_resource.device, resource=new_resource, node),
       :bond_mode => Chef::Recipe::Network_interfaces.value(:bond_mode,new_resource.device, resource=new_resource, node),

@@ -8,6 +8,8 @@ actions :save, :remove
 attribute :device, :kind_of => String, :name_attribute => true
 attribute :bridge, :kind_of => [ TrueClass, FalseClass, Array ]
 attribute :bridge_stp, :kind_of => [ TrueClass, FalseClass ]
+attribute :bridge_fd, :kind_of => Integer
+attribute :bridge_maxwait, :kind_of => Integer
 attribute :bond, :kind_of => [ TrueClass, FalseClass, Array ]
 attribute :bond_mode, :kind_of => String
 attribute :vlan_dev, :kind_of => String
