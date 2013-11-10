@@ -29,6 +29,12 @@ iface <%= @device %> inet <%= @type %>
 <% if @bridge_maxwait -%>
   bridge_maxwait <%= @bridge_maxwait %>
 <% end %>
+<% if @dns_nameservers -%>
+  dns-nameservers<% @dns_nameservers.each do |nameserver| %> <%= nameserver %><% end %>
+<% end %>
+<% if @dns_domain -%>
+  dns-domain <%= @dns_domain %>
+<% end %>
 <% if @bond_slaves -%>
 	bond-slaves<% @bond_slaves.each do |iface| %> <%= iface %><% end %>
 <% end %>

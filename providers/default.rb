@@ -63,6 +63,8 @@ action :save do
       :bridge_stp => Chef::Recipe::Network_interfaces.value(:bridge_stp,new_resource.device, resource=new_resource, node),
       :bridge_fd => Chef::Recipe::Network_interfaces.value(:bridge_fd,new_resource.device, resource=new_resource, node),
       :bridge_maxwait => Chef::Recipe::Network_interfaces.value(:bridge_maxwait,new_resource.device, resource=new_resource, node),
+      :dns_nameservers => Chef::Recipe::Network_interfaces.value(:dns_nameservers,new_resource.device, resource=new_resource, node),
+      :dns_domain => Chef::Recipe::Network_interfaces.value(:dns_domain,new_resource.device, resource=new_resource, node),
       :vlan_dev => Chef::Recipe::Network_interfaces.value(:vlan_dev,new_resource.device, resource=new_resource, node),
       :bond_slaves => Chef::Recipe::Network_interfaces.value(:bond,new_resource.device, resource=new_resource, node),
       :bond_mode => Chef::Recipe::Network_interfaces.value(:bond_mode,new_resource.device, resource=new_resource, node),
